@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "lastname": "admin",
+      "email":"admin@admin.com",
+      "password":"12345",
+      "role":"admin"
+    },
+    {
+      "id": 2,
+      "name": "user",
+      "lastname": "user",
+      "email":"user@user.com",
+      "password":"12345",
+      "role":"user"
+    }
+
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "name": "Buscando a nemo",
+      "description": "Nemo, un pequeño pececillo, muy querido y protegido por su padre, se pierde fuera de la gran barrera del arrecife australiano, después de ser capturado por este arrecife, Nemo terminará en una pecera en Sidney.",
+      "category":"animada",
+      "featured":false,
+      "image":"https://pics.filmaffinity.com/Buscando_a_Nemo-284341931-large.jpg"
+    },
+    {
+      "id": 2,
+      "name": "The batman",
+      "description": "En su segundo año luchando contra el crimen, Batman explora la corrupción existente en la ciudad de Gotham y el vínculo de esta con su propia familia. Además, entrará en conflicto con un asesino en serie conocido como el Acertijo.",
+      "category":"accion",
+      "featured":true,
+      "image":"https://pics.filmaffinity.com/The_Batman-449856406-large.jpg"
+    }
+    ,
+    {
+      "id": 3,
+      "name": "Que paso ayer",
+      "description": "Dos días antes de su boda, Doug y tres amigos viajan a Las Vegas para una fiesta inolvidable y salvaje. De hecho, cuando los tres acompañantes despiertan la mañana siguiente, no recuerdan nada ni encuentran a Doug. Con poco tiempo por delante, los tres amigos intentan recordar sus pasos y encontrar a Doug para que regrese a Los Ángeles para su boda.",
+      "category":"comedia",
+      "featured":false,
+      "image":"https://pics.filmaffinity.com/A_Qu_pas_ayer-999185521-large.jpg"
+    }
+  ]
+
+}
