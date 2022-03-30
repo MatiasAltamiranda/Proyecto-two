@@ -24,7 +24,7 @@
       "name": "Buscando a nemo",
       "description": "Nemo, un pequeño pececillo, muy querido y protegido por su padre, se pierde fuera de la gran barrera del arrecife australiano, después de ser capturado por este arrecife, Nemo terminará en una pecera en Sidney.",
       "category":"animada",
-      "featured":false,
+      "featured":true,
       "image":"https://pics.filmaffinity.com/Buscando_a_Nemo-284341931-large.jpg"
     },
     {
@@ -43,6 +43,14 @@
       "category":"comedia",
       "featured":false,
       "image":"https://pics.filmaffinity.com/A_Qu_pas_ayer-999185521-large.jpg"
+    }, 
+     {
+      "id": 4,
+      "name": "Los increibles 2",
+      "description": "Helen es reclutada para ayudar a que la acción vuelva a la vida de los Súper, mientras Bob se enfrenta a la rutina de su vida diaria normal en el hogar. En casa debe lidiar con un bebé que está a punto de descubrir sus superpoderes.",
+      "category":"animada",
+      "featured":false,
+      "image":"https://lumiere-a.akamaihd.net/v1/images/image_4f447b1d.jpeg"
     }
   ]
 
