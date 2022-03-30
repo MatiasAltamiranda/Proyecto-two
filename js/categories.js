@@ -5,7 +5,7 @@ async function getCategorie(){
     const response = await fetch(`${apiURL}`);
     const data = await response.json();
     createCardAnimated(data);
-    createCardAction(data);
+    createCardAction(data, categoryAction, 'accion');
     createCardComedy(data);
     createCardFeatured(data);
 }
@@ -23,17 +23,18 @@ function createCardAnimated(data){
     })
     ;
 }
+const categoryAction = document.querySelector('#categorieAction');
 
-function createCardAction(data){
-    const categorieAction = document.querySelector('#categorieAction');
-    data = data.filter(e => e.category == "accion")
+function createCardAction(data, container,category){
+    data = data.filter(e => e.category == category)
     data.forEach(e => {
         const divCard = document.createElement('div');
         divCard.classList= 'col-6 col-sm-6 col-md-4 col-lg-3';
         divCard.innerHTML=`<a href="#"><img class="img-fluid p-3" src="${e.image}" alt="Image ${e.name}">`
-        categorieAction.append(divCard)
+        container.append(divCard)
     });
 }
+
 
 function createCardComedy(data){
     const categorieComedy = document.querySelector('#categorieComedy');
@@ -56,3 +57,5 @@ function createCardFeatured(data){
         categorieFeatured.append(divCard)
     });
 }
+
+export default getCategorie;
