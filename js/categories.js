@@ -1,13 +1,18 @@
 function createCategories(){
 
 async function getCategorie(){
-    const apiURL ='http://localhost:4000/movies';
-    const response = await fetch(`${apiURL}`);
-    const data = await response.json();
-    createCards(data,categorieAnimated, 'animada');
-    createCards(data, categoryAction, 'accion');
-    createCards(data, categorieComedy,'comedia');
-    createCardsFeatured(data, categorieFeatured);
+    try{
+        const apiURL ='http://localhost:4000/movies';
+        const response = await fetch(`${apiURL}`);
+        const data = await response.json();
+        createCards(data,categorieAnimated, 'animada');
+        createCards(data, categoryAction, 'accion');
+        createCards(data, categorieComedy,'comedia');
+        createCardsFeatured(data, categorieFeatured);
+    } 
+    catch(error){
+        console.log(error)
+    }
 }
 
 getCategorie()
@@ -31,7 +36,7 @@ function createCard(data,container){
     data.forEach(e => {
         const divCard = document.createElement('div');
         divCard.classList= 'col-6 col-sm-6 col-md-4 col-lg-3';
-        divCard.innerHTML=`<a href="#"><img class="img-fluid p-3" src="${e.image}" alt="Image ${e.name}"></a>`
+        divCard.innerHTML=`<a href="../pages/profile.html#${e.id}"><img class="img-fluid p-3" src="${e.image}" alt="Image ${e.name}"></a>`
         container.append(divCard)
     });
 }
