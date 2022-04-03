@@ -31,7 +31,7 @@ function createCard(data,container){
     data.forEach(e => {
         const divCard = document.createElement('div');
         divCard.classList= 'col-6 col-sm-6 col-md-4 col-lg-3';
-        divCard.innerHTML=`<a href="#"><img class="img-fluid p-3" src="${e.image}" alt="Image ${e.name}">`
+        divCard.innerHTML=`<a href="#"><img class="img-fluid p-3" src="${e.image}" alt="Image ${e.name}"></a>`
         container.append(divCard)
     });
 }
