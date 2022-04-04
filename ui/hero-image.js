@@ -56,7 +56,7 @@ function getMovieArr(arr) {
 
   arr.forEach((element) => {
     heroImage.innerHTML = `
-  <img class="w-100 hero-image" src="${element.image}" alt="">
+  <img class="img-fluid hero-image" src="${element.coverPage}" alt="">
   <div class="overlay p-5 text-white d-flex flex-column justify-content-end">
      <h2>${element.name}</h2>
      <p class="w-50 pe-5">${element.description}</p>
