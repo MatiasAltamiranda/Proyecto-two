@@ -25,7 +25,9 @@
       "description": "Nemo, un pequeño pececillo, muy querido y protegido por su padre, se pierde fuera de la gran barrera del arrecife australiano, después de ser capturado por este arrecife, Nemo terminará en una pecera en Sidney.",
       "category":"Animada",
       "featured":true,
-      "image":"https://pics.filmaffinity.com/Buscando_a_Nemo-284341931-large.jpg"
+      "image":"https://pics.filmaffinity.com/Buscando_a_Nemo-284341931-large.jpg",
+      "coverPage" : "https://w0.peakpx.com/wallpaper/648/1001/HD-wallpaper-finding-nemo-pixar-disney-finding-nemo.jpg",
+      "trailer" : "https://www.youtube.com/watch?v=ba4TwyaNhSQ"
     },
     {
       "id": 2,
@@ -33,7 +35,9 @@
       "description": "En su segundo año luchando contra el crimen, Batman explora la corrupción existente en la ciudad de Gotham y el vínculo de esta con su propia familia. Además, entrará en conflicto con un asesino en serie conocido como el Acertijo.",
       "category":"Accion",
       "featured":true,
-      "image":"https://pics.filmaffinity.com/The_Batman-449856406-large.jpg"
+      "image":"https://pics.filmaffinity.com/The_Batman-449856406-large.jpg",
+      "coverPage" : "https://media.revistagq.com/photos/621deb2341f5819ea235622c/16:9/w_2560%2Cc_limit/the-batman-robert-pattinson-criticas.jpeg",
+      "trailer" : "https://www.youtube.com/watch?v=fWQrd6cwJ0A"
     }
     ,
     {
@@ -42,7 +46,9 @@
       "description": "Dos días antes de su boda, Doug y tres amigos viajan a Las Vegas para una fiesta inolvidable y salvaje. De hecho, cuando los tres acompañantes despiertan la mañana siguiente, no recuerdan nada ni encuentran a Doug. Con poco tiempo por delante, los tres amigos intentan recordar sus pasos y encontrar a Doug para que regrese a Los Ángeles para su boda.",
       "category":"Comedia",
       "featured":false,
-      "image":"https://pics.filmaffinity.com/A_Qu_pas_ayer-999185521-large.jpg"
+      "image":"https://pics.filmaffinity.com/A_Qu_pas_ayer-999185521-large.jpg",
+      "coverPage" : "https://hbomax-images.warnermediacdn.com/images/GYafDvANaBcLDSQEAAAAg/tileburnedin?size=1280x720&partner=hbomaxcom&v=e193f74534c4fd5ee31908ff30a037c3&language=es-419&host=art-gallery.api.hbo.com&w=Infinity",
+      "trailer" : "https://www.youtube.com/watch?v=wnNgGp1KVWQ"
     }, 
      {
       "id": 4,
@@ -50,7 +56,9 @@
       "description": "Helen es reclutada para ayudar a que la acción vuelva a la vida de los Súper, mientras Bob se enfrenta a la rutina de su vida diaria normal en el hogar. En casa debe lidiar con un bebé que está a punto de descubrir sus superpoderes.",
       "category":"Animada",
       "featured":false,
-      "image":"https://lumiere-a.akamaihd.net/v1/images/image_4f447b1d.jpeg"
+      "image":"https://lumiere-a.akamaihd.net/v1/images/image_4f447b1d.jpeg",
+      "coverPage" : "https://moviefilmsla.files.wordpress.com/2018/06/losincrec3adbles2_facebook_v2_moviefilms.png",
+      "trailer" : "https://www.youtube.com/watch?v=8UwxL-Zheqk"
     }
   ]
 
