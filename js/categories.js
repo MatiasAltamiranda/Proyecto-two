@@ -5,9 +5,9 @@ async function getCategorie(){
         const apiURL ='http://localhost:4000/movies';
         const response = await fetch(`${apiURL}`);
         const data = await response.json();
-        createCards(data,categorieAnimated, 'animada');
-        createCards(data, categoryAction, 'accion');
-        createCards(data, categorieComedy,'comedia');
+        createCards(data,categorieAnimated, 'Animada');
+        createCards(data, categoryAction, 'Accion');
+        createCards(data, categorieComedy,'Comedia');
         createCardsFeatured(data, categorieFeatured);
     } 
     catch(error){
