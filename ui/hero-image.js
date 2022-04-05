@@ -1,37 +1,3 @@
-/*const heroPelicula = peliculas.find((element) => element.featured);
-
-
-
-if (heroPelicula) {
-  const { name, description, image } = heroPelicula;
-
-  const heroImage = document.querySelector("#heroImage");
-
-  heroImage.innerHTML = `
-  <img class="w-100 hero-image" src="${image}" alt="">
-  <div class="overlay p-5 text-white d-flex flex-column justify-content-end">
-     <h2>${name}</h2>
-     <p class="w-50 pe-5">${description}</p>
-     <button class="w-25 btn btn-primary">Reproducir</button>
-  </div>
-  `;
-}*/
-
-/*function createHeroImage(pelicula) {
-  const { name, description, image } = pelicula;
-
-  const heroImage = document.querySelector("#heroImage");
-
-  heroImage.innerHTML = `
-  <img class="w-100 hero-image" src="${image}" alt="">
-  <div class="overlay p-5 text-black d-flex flex-column justify-content-end">
-     <h2>${name}</h2>
-     <p class="w-50 pe-5">${description}</p>
-     <button class="w-25 btn btn-primary">Reproducir</button>
-  </div>
-  `;
-}
-
 /*1) crear funcion asyc oara traer peliculas 
 2 hacer fetch, transformar en json 
 eso me va dar un array de peliculas al cual hay que hacerle el find 

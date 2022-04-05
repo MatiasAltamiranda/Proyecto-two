@@ -1,15 +1,19 @@
 const footer = document.createElement("footer");
 
 footer.innerHTML = ` 
-      <div>
-        <p>Logo</p>
-      </div>
-      <div>
-          <p>CopyRight 2022 | Todos los derechos reservados</p>
-      </div>
-      <div class= 'd-flex flex-column'>
-          <button class= 'my-1 button-color'>Contactenos</button>
-          <button class= 'my-1 button-color'>About us</button>
+      <div class='container-xl'>
+        <div class='row'>
+          <div class='col'>
+              <p>Logo</p>
+          </div>
+          <div class='col'>
+               <p>CopyRight 2022 | Todos los derechos reservados</p>
+          </div>
+          <div class= 'd-flex flex-column col'>
+               <button class= 'my-1 button-color'>Contactenos</button>
+               <button class= 'my-1 button-color'>About us</button>
+          </div>
+        </div>
       </div>
       `;
 footer.className =
