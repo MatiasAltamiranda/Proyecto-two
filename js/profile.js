@@ -49,8 +49,8 @@ function buildComment(comment){
         emailComment.classList='col-12'
         const textComment = document.createElement('div')
         textComment.classList='col-12 mb-5'
-        emailComment.innerHTML=`<p><strong>${e.email}</strong> </p>`
-        textComment.innerHTML =`<p>${e.body}</p>`
+        emailComment.innerHTML=`<p class="text-light"><strong>${e.email}</strong> </p>`
+        textComment.innerHTML =`<p class="text-light">${e.body}</p>`
         listComments.append(emailComment)
         listComments.append(textComment)
     });
