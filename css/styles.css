@@ -2,7 +2,32 @@
     background-color: #030328;
 }
 
+
+/* SECTION CATEGORIAS */
+
+.card_group::-webkit-scrollbar{
+    height: 0.6rem;
+    background-color: #0f0f46;
+}
+
+.card_group::-webkit-scrollbar-thumb{
+    background: #8a70aa;
+    border-radius: 1rem;
+}
+
+.card_group_img{
+    width: 20rem;
+    height: 30rem;
+    object-fit: cover;
+}
+
 .card_group{
-    width: 100%;
-    display: flex;
+    background-image: linear-gradient(to left bottom, #302960, #332961, #372963, #3a2864, #3e2865);
+    border-radius: 1rem 1rem 0 0;
+    padding: 1rem;
+}
+
+.categories_movie{
+    border-radius: 1rem;
+    background-image: linear-gradient(to left bottom, #2f1056, #2a1054, #241152, #1e1150, #18114e);
 }

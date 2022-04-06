@@ -34,10 +34,10 @@ function createCardsFeatured(data,container){
 
 function createCard(data,container){
     data.forEach(e => {
-        const divCard = document.createElement('div');
-        divCard.classList= 'col-6 col-sm-6 col-md-4 col-lg-3';
-        divCard.innerHTML=`<a href="../pages/profile.html#${e.id}"><img class="img-fluid p-3" src="${e.image}" alt="Image ${e.name}"></a>`
-        container.append(divCard)
+        const anclaImg = document.createElement('a');
+        anclaImg.href = `../pages/profile.html#${e.id}`
+        anclaImg.innerHTML=`<img class="card_group_img p-3" src="${e.image}" alt="Image ${e.name}">`
+        container.append(anclaImg)
     });
 }
 
