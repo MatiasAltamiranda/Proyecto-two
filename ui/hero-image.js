@@ -17,18 +17,39 @@ async function getMovies() {
 }
 
 function getMovieArr(arr) {
-  arr = arr.filter((element) => element.featured === true);
+  const featured = arr.find((element) => element.featured === true) || arr[0];
   const heroImage = document.querySelector("#heroImage");
-
-  arr.forEach((element) => {
+  if (featured) {
+    const { coverPage, name, description } = featured;
     heroImage.innerHTML = `
-  <img class="img-fluid hero-image" src="${element.coverPage}" alt="">
+  <img class=" w-100 hero-image" src="${coverPage}" alt="">
   <div class="overlay p-5 text-white d-flex flex-column justify-content-end">
-     <h2>${element.name}</h2>
-     <p class="w-50 pe-5">${element.description}</p>
-     <button class="w-25 btn btn-primary">Reproducir</button>
+     <h2>${name}</h2>
+     <p class="w-50 pe-5">${description}</p>
+     <button class="btn btn-primary button">Reproducir</button>
   </div>
   `;
-  });
+  }
 }
+
 getMovies();
+
+/*const setFeatured = async (id, arr) => {
+  const objetoEncontrado = arr.find((element) => element.featured === true)
+  objetoEncontrado.featured = false
+
+  await fetch(`${API_URL}/movies/${objetoEncontrado.id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(objetoEncontrado)
+  })
+  .then(()=> {
+    const nuevoFeatured = arr.find((element) => element.id === id)
+    nuevoFeatured.featured = true
+    fetch(`${API_URL}/movies/${id}`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(nuevoFeatured)
+    })
+  })
+}*/
