@@ -19,7 +19,9 @@
 .button {
   width: fit-content;
 }
-
+.hero-description {
+  width: 50%;
+}
 @media (max-width: 1040px) {
   .hero-description {
     width: 80%;

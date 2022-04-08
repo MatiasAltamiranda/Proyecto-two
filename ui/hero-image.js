@@ -25,7 +25,7 @@ function getMovieArr(arr) {
   <img class=" w-100 hero-image" src="${coverPage}" alt="">
   <div class="overlay p-5 text-white d-flex flex-column justify-content-end">
      <h2>${name}</h2>
-     <p class="w-50 pe-5">${description}</p>
+     <p class="hero-description pe-5 ">${description}</p>
      <button class="btn btn-primary button">Reproducir</button>
   </div>
   `;
