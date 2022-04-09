@@ -1,5 +1,5 @@
 .table-image {
-  max-width: 65%;
+  max-width: 55%;
 }
 
 td, th{
@@ -20,4 +20,8 @@ body{
   background-color: #030328;
   color: white;
   border: 1px solid white;
+}
+
+.hide{
+  display: none;
 }

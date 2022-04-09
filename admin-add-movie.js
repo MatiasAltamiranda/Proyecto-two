@@ -13,9 +13,12 @@ function buildMoviesTable(movies){
   movies.forEach((movie)=>{
     const tableRow = document.createElement('tr');
     tableRow.innerHTML=`
-      <td>
-        ${movie.name}
-        <button id="edit-movie-btn" class="btn btn-outline-light mt-3">Editar Película</button>
+      <td class="hide">${movie.id}</td>
+      <td id=${movie.id}>
+      ${movie.name} <br/>
+      <button class="btn btn-outline-light mt-3">Editar Película</button>
+      <button class="btn btn-outline-warning mt-3">Destacar Película</button>
+      <button class="delete-btn btn btn-outline-danger mt-3">Eliminar Película</button>
       </td>
       <td>${movie.category}</td>
       <td>${movie.featured}</td>
@@ -72,6 +75,14 @@ function validateInputs(){
   };
 }
 
+async function deleteMovies(id){
+  try {
+    await fetch(`${API_URL}/movies/${id}`, {method: 'DELETE'});
+  } catch (error) {
+    return error;
+  }
+}
+
 //HACER QUE EL BOTÓN SE DESHABILITE CUANDO UN INPUT ESTA VACÍO
 /* function disableButton(input){
   if(input.value === ''){
@@ -81,10 +92,6 @@ function validateInputs(){
   }
 }
 disableButton(nameInput); */
-
-const editMovieBtn = document.querySelector('#edit-movie-btn');
-console.log(editMovieBtn);
-
 
 addListeners();
 function addListeners(){
@@ -97,10 +104,11 @@ function addListeners(){
   featuredInput.addEventListener('blur', validateInputs);
   descriptionInput.addEventListener('blur', validateInputs);
   imageInput.addEventListener('blur', validateInputs);
-
+  moviesTable.addEventListener('click', e =>{
+    if(e.target.classList.contains('delete-btn')){
+      deleteMovies(e.target.parentElement.id);
+    }
+  })
 }
 
 //TODO: HACER LA PÁGINA PARA ADMIN.
-
-//2DA TAREA: EDITAR PELICULA
-
