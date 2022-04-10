@@ -6,7 +6,11 @@ const titleMovie = document.querySelector("#titleMovie")
 const categoryMovie = document.querySelector("#categoryMovie")
 const descriptionMovie = document.querySelector("#descriptionMovie")
 const listComments = document.querySelector('#listComments')
+const embed = document.querySelector('#embed')
+const inputText = document.querySelector('#exampleInputtext')
+const textArea = document.querySelector('#exampleFormControlTextarea1')
 
+/* SECCION CATEGORIAS */
 
 async function getMovies(id){
  try {
@@ -18,8 +22,8 @@ async function getMovies(id){
  }
 }
 
-
 function buildMoviesDOM(movie){
+    embed.src = `${movie.trailer}`
     containerImg.innerHTML=`<img class="img-fluid" src="${movie.image}">`
     titleMovie.textContent=`${movie.name}`;
     categoryMovie.textContent = ` ${movie.category}`
@@ -29,6 +33,10 @@ function buildMoviesDOM(movie){
 document.addEventListener('DOMContentLoaded', ()=>{
   getMovies(idURL)
 })
+
+
+
+/* SECCION COMENTARIOS */
 
 
 async function getComments(){
@@ -57,3 +65,68 @@ function buildComment(comment){
 }
 
 getComments();
+
+
+/* VALIDACION DE INPUTS */
+
+inputText.addEventListener('blur', validateInput)
+textArea.addEventListener('blur', validateInput)
+
+
+
+function validateInput(){
+    const parentDiv = this.parentElement;
+    if ( this.value === ''){
+        const mesagge = document.createElement('p')
+        mesagge.classList='text-danger fw-bold mt-3';
+        this.style.border= "2px solid red"
+        mesagge.textContent = '*ESTE CAMPO ES OBLIGATORIO*'
+        parentDiv.append(mesagge)
+        setTimeout(()=>{
+            mesagge.remove();
+        }, 3000)}
+    else if(this.type === 'text'){
+        validateEmail(this)
+    }    
+     else{
+        validateLenght(this)
+     }   
+}
+
+
+function validateEmail(field){
+    const value = field.value;
+    const parentDiv = field.parentElement;
+    const regEx =/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (regEx.test(value.toLowerCase())){
+        field.style.border= "2px solid green"
+    }
+    else{
+        const mesagge = document.createElement('p')
+        mesagge.classList='text-danger fw-bold mt-3';
+        field.style.border= "2px solid red"
+        mesagge.textContent = '*EL E-MAIL NO ES VALIDO*'
+        parentDiv.append(mesagge)
+        setTimeout(()=>{
+            mesagge.remove();
+        }, 3000)
+    }
+}
+
+function validateLenght(field){
+    const parentDiv = field.parentElement;
+    if (field.value.length <= 10){
+        field.style.border= "2px solid green"
+    }
+    else{
+        const mesagge = document.createElement('p')
+        mesagge.classList='text-danger fw-bold mt-3';
+        field.style.border= "2px solid red"
+        mesagge.textContent = '*LIMITE 500 CARACTERES*'
+        parentDiv.append(mesagge)
+        setTimeout(()=>{
+            mesagge.remove();
+        }, 3000)
+    }
+}
+

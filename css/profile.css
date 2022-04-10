@@ -1,0 +1,5 @@
+.input_style{
+    background-image: linear-gradient(to left bottom, #302960, #332961, #372963, #3a2864, #3e2865);
+    border: none;
+    filter: brightness(60%);
+}

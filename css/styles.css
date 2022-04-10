@@ -16,8 +16,8 @@
 }
 
 .card_group_img{
-    width: 20rem;
-    height: 30rem;
+    width: 18rem;
+    height: 25rem;
     object-fit: cover;
 }
 
@@ -30,4 +30,18 @@
 .categories_movie{
     border-radius: 1rem;
     background-image: linear-gradient(to left bottom, #2f1056, #2a1054, #241152, #1e1150, #18114e);
+}
+
+/* xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px,
+xxl: 1400px */
+
+@media (max-width : 768px){
+    .card_group_img{
+        width: 14rem;
+        height: 20rem;
+    }
 }
