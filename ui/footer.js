@@ -1,6 +1,7 @@
-const footer = document.createElement("footer");
+export function createFooter() {
+  const footer = document.createElement("footer");
 
-footer.innerHTML = ` 
+  footer.innerHTML = ` 
       <div class='container-xl'>
         <div class='row'>
           <div class='container-sm col-12 col-md-4 text-center pb-4' >
@@ -17,7 +18,9 @@ footer.innerHTML = `
         </div>
       </div>
       `;
-footer.className =
-  "p-4 d-flex justify-content-between align-items-center footer-color";
+  footer.className =
+    "p-4 d-flex justify-content-between align-items-center footer-color";
 
-document.body.append(footer);
+  document.body.append(footer);
+}
+export default createFooter;
