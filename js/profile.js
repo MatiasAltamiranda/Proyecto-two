@@ -106,7 +106,7 @@ function validateEmail(field) {
 
 function validateLenght(field) {
   const parentDiv = field.parentElement;
-  if (field.value.length <= 10) {
+  if (field.value.length <= 500) {
     field.style.border = "2px solid green";
   } else {
     const mesagge = document.createElement("p");
