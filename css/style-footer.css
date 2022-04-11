@@ -1,0 +1,21 @@
+.footer-color {
+  background-color: #030328;
+  color: white;
+}
+
+.button-color {
+  background: #030328;
+  color: white;
+  border: rgb(85, 16, 85) 2px solid;
+  border-radius: 24px;
+  width: fit-content;
+}
+
+.button-color:hover {
+  background: white;
+  color: #030328;
+}
+.image-size {
+  height: 100px;
+  width: 100px;
+}
