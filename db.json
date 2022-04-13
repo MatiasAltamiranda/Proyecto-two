@@ -22,26 +22,43 @@
       "id": 1,
       "name": "Buscando a nemo",
       "description": "Nemo, un pequeño pececillo, muy querido y protegido por su padre, se pierde fuera de la gran barrera del arrecife australiano, después de ser capturado por este arrecife, Nemo terminará en una pecera en Sidney.",
+<<<<<<< HEAD
+      "category": "animada",
+      "featured": false,
+      "image": "https://pics.filmaffinity.com/Buscando_a_Nemo-284341931-large.jpg"
+=======
       "category": "Animada",
       "featured": true,
       "image": "https://pics.filmaffinity.com/Buscando_a_Nemo-284341931-large.jpg",
       "coverPage": "https://w0.peakpx.com/wallpaper/648/1001/HD-wallpaper-finding-nemo-pixar-disney-finding-nemo.jpg",
       "trailer": "https://www.youtube.com/embed/ba4TwyaNhSQ"
+>>>>>>> 4c43ed6887b2e9f1a37050ad5cd23689758a64f1
     },
     {
       "id": 2,
       "name": "The batman",
       "description": "En su segundo año luchando contra el crimen, Batman explora la corrupción existente en la ciudad de Gotham y el vínculo de esta con su propia familia. Además, entrará en conflicto con un asesino en serie conocido como el Acertijo.",
+<<<<<<< HEAD
+      "category": "accion",
+      "featured": true,
+      "image": "https://pics.filmaffinity.com/The_Batman-449856406-large.jpg"
+=======
       "category": "Accion",
       "featured": true,
       "image": "https://pics.filmaffinity.com/The_Batman-449856406-large.jpg",
       "coverPage": "https://media.revistagq.com/photos/621deb2341f5819ea235622c/16:9/w_2560%2Cc_limit/the-batman-robert-pattinson-criticas.jpeg",
       "trailer": "https://www.youtube.com/embed/fWQrd6cwJ0A"
+>>>>>>> 4c43ed6887b2e9f1a37050ad5cd23689758a64f1
     },
     {
       "id": 3,
       "name": "Que paso ayer?",
       "description": "Dos días antes de su boda, Doug y tres amigos viajan a Las Vegas para una fiesta inolvidable y salvaje. De hecho, cuando los tres acompañantes despiertan la mañana siguiente, no recuerdan nada ni encuentran a Doug. Con poco tiempo por delante, los tres amigos intentan recordar sus pasos y encontrar a Doug para que regrese a Los Ángeles para su boda.",
+<<<<<<< HEAD
+      "category": "comedia",
+      "featured": false,
+      "image": "https://pics.filmaffinity.com/A_Qu_pas_ayer-999185521-large.jpg"
+=======
       "category": "Comedia",
       "featured": true,
       "image": "https://pics.filmaffinity.com/A_Qu_pas_ayer-999185521-large.jpg",
@@ -57,6 +74,7 @@
       "image": "https://lumiere-a.akamaihd.net/v1/images/image_4f447b1d.jpeg",
       "coverPage": "https://moviefilmsla.files.wordpress.com/2018/06/losincrec3adbles2_facebook_v2_moviefilms.png",
       "trailer": "https://www.youtube.com/embed/8UwxL-Zheqk"
+>>>>>>> 4c43ed6887b2e9f1a37050ad5cd23689758a64f1
     }
   ]
 }
