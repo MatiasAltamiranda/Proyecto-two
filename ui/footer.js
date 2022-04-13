@@ -5,7 +5,7 @@ export function createFooter() {
       <div class='container-xl'>
         <div class='row'>
           <div class='container-sm col-12 col-md-4 text-center pb-4' >
-              <a><img class="img-thumbnail img-fluid image-size" src="./img/WhatsApp Image 2022-04-08 at 1.00.51 AM.jpeg" alt=""></a>
+              <a><img class="img-fluid image-size" src="./img/logo.png" alt=""></a>
           </div>
           <div class='col-12 col-md-4 text-center pt-3'>
                <p>CopyRight 2022 &copy</p>
