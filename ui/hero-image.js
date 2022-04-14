@@ -23,10 +23,12 @@ function getMovieArr(arr) {
     const { coverPage, name, description } = featured;
     heroImage.innerHTML = `
   <img class=" w-100 hero-image" src="${coverPage}" alt="">
-  <div class="overlay p-5 text-white d-flex flex-column justify-content-end">
-     <h2>${name}</h2>
-     <p class="hero-description pe-5 ">${description}</p>
-     <button class="btn btn-primary button">Reproducir</button>
+  <div class="text-center overlay p-5 text-white d-flex flex-column justify-content-end">
+     <h2 class="display-2 fw-bold">${name}</h2>
+     <p class="fs-5 text-center">${description}</p>
+     <div class="text-center">
+     <button class="btn btn-outline-light button fs-1">Reproducir</button>
+     </div
   </div>
   `;
   }
