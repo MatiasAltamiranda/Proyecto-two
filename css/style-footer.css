@@ -1,0 +1,24 @@
+html {
+  font-size: 62.5%;
+}
+.footer-color {
+  background-color: #030328;
+  color: white;
+}
+
+.button-color {
+  background: #030328;
+  color: white;
+  border: rgb(85, 16, 85) 2px solid;
+  border-radius: 2.4rem;
+  width: fit-content;
+}
+
+.button-color:hover {
+  background: white;
+  color: #030328;
+}
+.image-size {
+  height: 10rem;
+  width: 10rem;
+}
