@@ -11,11 +11,11 @@
 <body class="colorBody">
     <section class="row py-5 my-5">
         <article class="col-lg-4"></article>
-        <article class="col-lg-4 colorForm text-center">
+        <article class="col-lg-4 colorForm ">
             <form onsubmit="validar(event)">
-                <img src="" alt="">
+                <img src="./img/logo.png" alt="logo" class="logoContacto">
                 <div class="mb-3 form-group">
-                    <label>Nombre de usuario</label>
+                    <label class="labelNombre">Nombre de usuario</label>
                     <input type="text" id="nombre" class="form-control"
                     onblur="revisar(this)"
                     onkeyup="revisar(this)" 
@@ -30,7 +30,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>Consulta</label>
+                    <label class="labelConsulta">Consulta</label>
                     <textarea class="form-control" id="consulta"onblur="revisar(this); revisarLongitud(this)"></textarea>
                     <div class="invalid-feedback">
                         Por favor ingrese una consulta valida
@@ -43,7 +43,7 @@
                         <div class="invalid-feedback">Para continuar acepte terminos y condiciones</div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary text-center">Enviar</button>
+                <button type="submit" class="btn text-center btn-outline-dark">Enviar</button>
               </form>
         </article>
         <article class="col-lg-4"></article>
