@@ -1,3 +1,6 @@
+html {
+  font-size: 62.5%;
+}
 .footer-color {
   background-color: #030328;
   color: white;
@@ -7,7 +10,7 @@
   background: #030328;
   color: white;
   border: rgb(85, 16, 85) 2px solid;
-  border-radius: 24px;
+  border-radius: 2.4rem;
   width: fit-content;
 }
 
@@ -16,6 +19,6 @@
   color: #030328;
 }
 .image-size {
-  height: 100px;
-  width: 100px;
+  height: 10rem;
+  width: 10rem;
 }

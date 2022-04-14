@@ -1,9 +1,3 @@
-/*1) crear funcion asyc oara traer peliculas 
-2 hacer fetch, transformar en json 
-eso me va dar un array de peliculas al cual hay que hacerle el find 
- 
-despues de hacer el find llamar a create hero image y pasar por parametros la pelicula encontrada en eel find
-*/
 const API_URL = `http://localhost:4000`;
 
 async function getMovies() {
