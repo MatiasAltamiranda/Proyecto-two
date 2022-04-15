@@ -34,15 +34,33 @@ function verificarCheckbox(){
 }
 
 function validar(event){
-    event.preventDefault();
-  console.log("dentro de la función validar");
 
- if(revisar(document.getElementById('nombre'))&&
-    revisarLongitud(document.getElementById('consulta')) &&
-    verificarCheckbox()
- ){
-     console.log("verdadero");
- }else{
-     console.log("falso");
- }
+event.preventDefault();
+event.stopPropagation();
+
+ console.log("dentro de la función validar");
+ console.log(nombre.value);
+ console.log(consulta.value);
+
+if(revisar(document.getElementById('nombre'))&&
+     revisarLongitud(document.getElementById('consulta')) &&
+     verificarCheckbox()
+  ){
+      console.log("verdadero");
+  }else{
+      console.log("falso");
+  }
+   
 }
+
+
+document.getElementById("nombre").addEventListener("reset");
+document.getElementById("consulta").addEventListener("reset");
+
+
+
+
+
+
+
+
