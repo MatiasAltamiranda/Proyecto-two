@@ -1,9 +1,9 @@
 const email = document.getElementById("email-lostp");
-const form = document.getElementById("form-lostp");
+const formulario = document.getElementById("form-lostp");
 const parrafo = document.getElementById("warnings-lostp");
 const parrafo2 = document.getElementById("send-lostp");
 
-form.addEventListener("click", function (e) {
+formulario.addEventListener("click", function (e) {
   e.preventDefault();
   let warnings = "";
   let entrar = false;
