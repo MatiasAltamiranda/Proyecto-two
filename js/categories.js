@@ -39,5 +39,4 @@ function createCategories() {
     });
   }
 }
-
-export default createCategories;
+ createCategories();
