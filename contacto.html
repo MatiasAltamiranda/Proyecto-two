@@ -12,14 +12,14 @@
     <section class="row py-5 my-5">
         <article class="col-lg-4"></article>
         <article class="col-lg-4 colorForm ">
-            <form onsubmit="validar(event)" id="loginForm">
+            <form onsubmit="validar(event)" id="contactForm">
                 <img src="./img/logo.png" alt="logo" class="logoContacto">
                 <div class="mb-3 form-group">
                     <label class="labelNombre">Nombre de usuario</label>
                     <input type="text" id="nombre" class="form-control"
                     onblur="revisar(this)"
                     onkeyup="revisar(this)" 
-                    aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+                    aria-label="Recipient's username" aria-describedby="basic-addon2" required/>
 
                     <div id="mensajes" class="invalid-feedback">
                         Ingrese nombre de usuario
@@ -31,7 +31,7 @@
                 
                 <div class="form-group">
                     <label class="labelConsulta">Consulta</label>
-                    <textarea class="form-control" id="consulta"onblur="revisar(this); revisarLongitud(this)"></textarea>
+                    <textarea class="form-control" id="consulta"onblur="revisar(this); revisarLongitud(this)" required></textarea>
                     <div class="invalid-feedback">
                         Por favor ingrese una consulta valida
                     </div>
@@ -43,7 +43,7 @@
                         <div class="invalid-feedback">Para continuar acepte terminos y condiciones</div>
                     </div>
                 </div>
-                <button type="reset" id="btn" class="btn btn-outline-dark">Enviar</button>
+                <button onclick="submit()" type="submit" id="btn" class="btn btn-outline-dark">Enviar</button>
               </form>
         </article>
         <article class="col-lg-4"></article>

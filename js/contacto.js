@@ -53,9 +53,12 @@ if(revisar(document.getElementById('nombre'))&&
    
 }
 
+function submit() {
+    document.getElementById("contactForm").submit();
+}
 
-document.getElementById("nombre").addEventListener("reset");
-document.getElementById("consulta").addEventListener("reset");
+
+
 
 
 
