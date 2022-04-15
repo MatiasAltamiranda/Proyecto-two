@@ -2,10 +2,21 @@
     background: #030328;
 }
 
-.colorForm{
+.formContacto{
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    margin: auto;
     background: #0e0e0e;
     padding-top: 20px;
     padding-bottom: 20px;
+    position: relative;
+    top: 30px;
+
+}
+
+.colorForm{
+    margin: auto;
 }
 
 .logoContacto{
@@ -19,8 +30,17 @@
 .labelNombre{
     padding-top: 20px;
     padding-bottom: 10px;
+    color:white;
 }
 
 .labelConsulta{
     padding-bottom: 10px;
+    color: white;
 }
+
+.labelCheckbox{
+    color:white;
+}
+
+
+
