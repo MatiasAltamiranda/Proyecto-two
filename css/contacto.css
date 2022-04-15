@@ -1,0 +1,26 @@
+.colorBody{
+    background: #030328;
+}
+
+.colorForm{
+    background: #0e0e0e;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.logoContacto{
+    width: 120px;
+    height: 120px ;
+    margin: 60px;
+    display:block;
+    margin: auto;
+}
+
+.labelNombre{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.labelConsulta{
+    padding-bottom: 10px;
+}
