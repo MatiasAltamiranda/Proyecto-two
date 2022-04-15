@@ -1,9 +1,10 @@
+
+
 const form = document.querySelector('#form');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 // const btnLogin = document.querySelector('#btnLogin')
 const API_URL = 'http://localhost:4000/users';
-
 
 
 form.addEventListener('submit', async e => {
@@ -26,36 +27,6 @@ form.addEventListener('submit', async e => {
 });
 
 
-function welcomeUser (){
-    const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
-    const messageWelcomeUser = document.querySelector('#welcomeUser');
-    if(loggedUser){
-        const welcomeMessage = document.createElement('p')
-        welcomeMessage.textContent = `Bienvenido ${loggedUser.name}`;
-        messageWelcomeUser.append(welcomeMessage);
-    }
-}
-welcomeUser();
-
-
-
-function validateInput(){
-    const parentDiv = this.parentElement;
-    if(this.type === 'email'){
-        validateEmail(this);
-    }
-    if(this.type === 'password') {
-        validateLength(this);
-    }
-    if(this.value === '') {
-        const warningMessage = document.createElement('p');
-        warningMessage.textContent = 'Este campo es obligatorio'
-        parentDiv.append(warningMessage);
-        setTimeout(() => {
-            warningMessage.remove();
-        }, 2000)
-    };
-}
 
 
 
