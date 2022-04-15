@@ -55,6 +55,7 @@ if(revisar(document.getElementById('nombre'))&&
 
 function submit() {
     document.getElementById("contactForm").submit();
+    e.preventDefault();
 }
 
 
