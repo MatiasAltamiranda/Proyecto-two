@@ -1,3 +1,5 @@
+
+
 const apiURL = "http://localhost:4000/movies";
 const commentURL = "https://jsonplaceholder.typicode.com/comments";
 const idURL = window.location.hash.slice(1);
@@ -119,6 +121,3 @@ function validateLenght(field) {
     }, 3000);
   }
 }
-
-import createFooter from "../ui/footer.js";
-createFooter();

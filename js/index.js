@@ -14,11 +14,7 @@
 //     window.location.href = '/login.html'
 // }
 
-
-
-// Section Categories
-import createCategories from "./categories.js";
-createCategories();
+import { createNavBar } from ".././ui/navBar.js";
 
 import createFooter from "../ui/footer.js";
 createFooter();
