@@ -15,7 +15,7 @@ form.addEventListener('submit', async e => {
     const currentUser = users.find(u => u.email === emailInput.value && u.password === passwordInput.value);
     if(currentUser){
         localStorage.setItem('loggedUser', JSON.stringify(currentUser));
-        const userLogged = JSON.parse(localStorage.getItem('loggedUser'));
+        const userLogged = await JSON.parse(localStorage.getItem('loggedUser'));
         if(userLogged || userLogged.role !== 'admin') {
             window.location.href = '/index.html'
         }else {
