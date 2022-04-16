@@ -1,14 +1,19 @@
 export function createNavBar(){
     const header = document.querySelector('#header')
-    const divHeader = document.createElement('div')
-    divHeader.className = "bg-black"
-    divHeader.innerHTML = `<ul class="nav justify-content-end">
-    <div>
-    <a href=/index.html> <img src=/img/logo.png width=35px> </a>
-    </div>
+    const divHeader = document.createElement('nav')
+    divHeader.className = "navbar navbar-expand-lg navbar-dark bg-dark"
+    divHeader.innerHTML = `
+    <div class="container-fluid">
+    <a class="p-3" href=/index.html> <img src=/img/logo.png width=60rem> </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
     <li class="nav-item">
-      <a class="nav-link disabled" id="welcomeUser"></a>
+      <a class="nav-link" aria-current="page" href=".././index.html">Inicio</a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href=".././about-us.html">Sobre nosotros</a>
+    </li>
+    </ul>
     <li class="nav-item">
       <div class="dropdown">
         <a
@@ -21,17 +26,18 @@ export function createNavBar(){
         >
         </a>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <li>
-            <a class="dropdown-item" href="/about-us.html">Acerca de Nosotro</a>
-          </li>
-          <li><a class="dropdown-item" href="#">contactanos!</a></li>
+          <li><a class="dropdown-item" href="../contacto.html">contactanos!</a></li>
         </ul>
       </div>
     </li>
     <li class="nav-item">
+      <a class="nav-link disabled" id="welcomeUser"></a>
+    </li>
+    <li class="nav-item">
       <a id="aCloseSession" href=/login.html>Logueate!</a>
     </li>
-  </ul>`;
+    </div>
+  </div>`;
   header.append(divHeader)
 
   // MENSAJE DE BIENVENIDA
