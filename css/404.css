@@ -1,0 +1,19 @@
+.contenedor {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(169, 27, 27),
+    rgb(172, 55, 55),
+    rgb(162, 111, 111),
+    rgb(172, 135, 135),
+    rgb(195, 164, 164),
+    rgb(225, 214, 214),
+    rgb(254, 253, 253)
+  );
+}
+.image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
