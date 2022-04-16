@@ -15,7 +15,12 @@ form.addEventListener('submit', async e => {
     const currentUser = users.find(u => u.email === emailInput.value && u.password === passwordInput.value);
     if(currentUser){
         localStorage.setItem('loggedUser', JSON.stringify(currentUser));
-        window.location.href = '.././index.html'
+        const userLogged = JSON.parse(localStorage.getItem('loggedUser'));
+        if(userLogged || userLogged.role !== 'admin') {
+            window.location.href = '/index.html'
+        }else {
+            window.location.href = '/admin.html'  
+        }
     }else {
         const warningMessage = document.createElement('p');
         warningMessage.textContent = 'Usuario o contraseña incorrecta'
@@ -25,6 +30,7 @@ form.addEventListener('submit', async e => {
         }, 2000)
     }
 });
+
 
 
 
@@ -58,3 +64,6 @@ function validateEmail (input) {
         // input.style.border = '5px solid black'
     }
 };
+
+
+// Redireccion a Pagina de Home o Admin page
