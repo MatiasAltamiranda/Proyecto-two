@@ -7,6 +7,7 @@ const categoryInput = document.querySelector('#category-input');
 const featuredInput = document.querySelector('#featured-input');
 const descriptionInput = document.querySelector('#description-input');
 const imageInput = document.querySelector('#image-input');
+const trailerInput = document.querySelector('#trailer-input');
 const modalForm = document.querySelector('#modal-form');
 //ELIMINAR PELICULA:
 const deleteMovieModal = document.querySelector('#delete-movie-modal');
@@ -16,6 +17,7 @@ const editCategoryInput = document.querySelector('#edit-category-input');
 const editFeaturedInput = document.querySelector('#featured-edit-input');
 const editDescriptionInput = document.querySelector('#edit-description-input');
 const editImageInput = document.querySelector('#edit-image-input');
+const editTrailerInput = document.querySelector('#edit-trailer-input');
 const editMovieModal = document.querySelector('#edit-movie-modal');
 const editMovieBtn = document.querySelector('#edit-movie-btn');
 const editModalForm = document.querySelector('#edit-modal-form')
@@ -37,6 +39,10 @@ function buildMoviesTable(movies){
       <td id="movie-description">${movie.description}</td>
       <td id="movie-image">
         <img class="table-image" src=${movie.image}>
+      </td>
+      <td id="movie-trailer">
+        <iframe w-45 height="180" src=${movie.trailer} title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </td>
     `;
     moviesTable.append(tableRow);
@@ -69,7 +75,8 @@ async function createMoviesToAdd(){
         description: descriptionInput.value,
         category: categoryInput.value,
         featured: featuredInput.value,
-        image: imageInput.value
+        image: imageInput.value,
+        trailer: trailerInput.value
       }
       )
     });
@@ -119,6 +126,7 @@ const fillEditInputs = (e) => {
   editFeaturedInput.value = e.target.parentElement.parentElement.querySelector('#featured-section').textContent.trim();
   editDescriptionInput.value = e.target.parentElement.parentElement.querySelector('#movie-description').textContent.trim();
   editImageInput.value = e.target.parentElement.parentElement.querySelector('#movie-image img').src;
+  editTrailerInput.value = e.target.parentElement.parentElement.querySelector('#movie-trailer iframe').src;
 };
 
 const udpateTable = async (id) => {
@@ -133,7 +141,8 @@ const udpateTable = async (id) => {
         description: editDescriptionInput.value,
         category: editCategoryInput.value,
         featured: editFeaturedInput.value,
-        image: editImageInput.value
+        image: editImageInput.value,
+        trailer: editTrailerInput.value
       }
       )
     })

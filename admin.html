@@ -26,6 +26,7 @@
         <th scope="col">Destacada</th>
         <th scope="col">Descripción</th>
         <th scope="col">Foto</th>
+        <th scope="col">Trailer</th>
       </tr>
     </thead>
     <tbody id="table-body">
@@ -79,6 +80,10 @@
                 <label>Foto:</label>
                 <input type="text" id="edit-image-input" placeholder="URL de la imágen">
               </div>
+              <div class="mb-4 d-flex flex-column align-items-center">
+                <label>Trailer:</label>
+                <input type="text" id="edit-trailer-input" placeholder="URL del trailer">
+              </div>
             </div>
             <div class="modal-footer">
               <button type="submit" class="btn btn-primary" id="edit-movie-btn">Editar</button>
@@ -117,6 +122,10 @@
           <div class="mb-4 d-flex flex-column align-items-center">  
             <label>Foto:</label>
             <input type="text" id="image-input" placeholder="URL de la imágen">
+          </div>
+          <div class="mb-4 d-flex flex-column align-items-center">
+            <label for="trailer-input">Trailer:</label>
+            <input type="text" id="trailer-input" placeholder="URL del trailer">
           </div>
         </div>
         <div class="modal-footer">
