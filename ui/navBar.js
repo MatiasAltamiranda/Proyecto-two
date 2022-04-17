@@ -75,24 +75,7 @@ export function createNavBar() {
     window.location.href = "/index.html";
   });
 
-  // VALIDAR INPUT
-  function validateInput() {
-    const parentDiv = this.parentElement;
-    if (this.type === "email") {
-      validateEmail(this);
-    }
-    if (this.type === "password") {
-      validateLength(this);
-    }
-    if (this.value === "") {
-      const warningMessage = document.createElement("p");
-      warningMessage.textContent = "Este campo es obligatorio";
-      parentDiv.append(warningMessage);
-      setTimeout(() => {
-        warningMessage.remove();
-      }, 2000);
-    }
-  }
+
 }
 
 export default createNavBar();
