@@ -1,6 +1,5 @@
 export function createFooter() {
   const footer = document.createElement("footer");
-
   footer.innerHTML = ` 
       <div class='container-xl'>
         <div class='row'>
