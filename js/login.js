@@ -8,6 +8,7 @@ const API_URL = 'http://localhost:4000/users';
 
 
 form.addEventListener('submit', async e => {
+    e.preventDefault()
     const parentDiv = passwordInput.parentElement;
     e.preventDefault();
     const response = await fetch(API_URL);
@@ -16,10 +17,10 @@ form.addEventListener('submit', async e => {
     if(currentUser){
         localStorage.setItem('loggedUser', JSON.stringify(currentUser));
         const userLogged = await JSON.parse(localStorage.getItem('loggedUser'));
-        if(userLogged || userLogged.role !== 'admin') {
-            window.location.href = '/index.html'
+        if(userLogged.role !== 'admin') {
+            window.location.href = '../index.html'
         }else {
-            window.location.href = '/admin.html'  
+            window.location.href = '../admin.html'  
         }
     }else {
         const warningMessage = document.createElement('p');
@@ -29,16 +30,36 @@ form.addEventListener('submit', async e => {
             warningMessage.remove();
         }, 2000)
     }
+    
 });
 
-
-
-
-
+  // VALIDAR INPUT
+  function validateInput() {
+    const parentDiv = this.parentElement;
+    if (this.type === "email") {
+      validateEmail(this);
+    }
+    if (this.type === "password") {
+      validateLength(this);
+    }
+    if (this.value === "") {
+      const warningMessage = document.createElement("p");
+      warningMessage.textContent = "Este campo es obligatorio";
+      parentDiv.append(warningMessage);
+      setTimeout(() => {
+        warningMessage.remove();
+      }, 2000);
+    }
+  }
 
 
 emailInput.addEventListener('blur', validateInput);
-passwordInput.addEventListener('blur', validateInput);
+passwordInput.addEventListener('blur', validateInput); 
+
+
+
+
+
 
 function validateLength (input) {
     if (input.value.length > 8 && input.value.length < 30) {
