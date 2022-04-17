@@ -204,3 +204,12 @@ function addListeners(){
     editDescriptionInput.addEventListener('blur', validateInputs);
     editImageInput.addEventListener('blur', validateInputs);
 }
+
+
+// REDIRECCIONAR AL INDEX SI NO SOS ADMIN 
+
+const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+
+if(!loggedUser || loggedUser.role !== 'admin') {
+  window.location.href = '/index.html'
+}
