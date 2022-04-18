@@ -48,14 +48,14 @@
       "trailer": "https://www.youtube.com/embed/tcdUhdOlz9M"
     },
     {
-      "id": 4,
       "name": "Los increibles 2",
       "description": "Helen es reclutada para ayudar a que la acción vuelva a la vida de los Súper, mientras Bob se enfrenta a la rutina de su vida diaria normal en el hogar. En casa debe lidiar con un bebé que está a punto de descubrir sus superpoderes.",
       "category": "Animada",
       "featured": false,
       "image": "https://lumiere-a.akamaihd.net/v1/images/image_4f447b1d.jpeg",
-      "coverPage": "https://moviefilmsla.files.wordpress.com/2018/06/losincrec3adbles2_facebook_v2_moviefilms.png",
-      "trailer": "https://www.youtube.com/embed/8UwxL-Zheqk"
+      "trailer": "",
+      "coverPage": "",
+      "id": 4
     }
   ]
 }

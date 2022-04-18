@@ -4,20 +4,24 @@ const API_URL = 'http://localhost:4000';
 const table = document.querySelector('#table');
 const nameInput = document.querySelector('#name-input');
 const categoryInput = document.querySelector('#category-input');
-const featuredInput = document.querySelector('#featured-input');
 const descriptionInput = document.querySelector('#description-input');
 const imageInput = document.querySelector('#image-input');
+const coverInput = document.querySelector('#cover-input');
 const trailerInput = document.querySelector('#trailer-input');
 const modalForm = document.querySelector('#modal-form');
+const actionCategory = document.querySelector('#action-category');
+const cartoonCategory = document.querySelector('#cartoon-category');
+const comedyCategory = document.querySelector('#comedy-category');
+const tableHead = document.querySelector('#table-head');
 //ELIMINAR PELICULA:
 const deleteMovieModal = document.querySelector('#delete-movie-modal');
 //EDITAR PELICULA:
 const editNameInput = document.querySelector('#edit-name-input');
 const editCategoryInput = document.querySelector('#edit-category-input');
-const editFeaturedInput = document.querySelector('#featured-edit-input');
 const editDescriptionInput = document.querySelector('#edit-description-input');
 const editImageInput = document.querySelector('#edit-image-input');
 const editTrailerInput = document.querySelector('#edit-trailer-input');
+const editCoverInput = document.querySelector('#edit-cover-input');
 const editMovieModal = document.querySelector('#edit-movie-modal');
 const editMovieBtn = document.querySelector('#edit-movie-btn');
 const editModalForm = document.querySelector('#edit-modal-form')
@@ -26,27 +30,24 @@ const editModalForm = document.querySelector('#edit-modal-form')
 //CREAR TABLA DE PELÍCULAS:
 function buildMoviesTable(movies){
   movies.forEach((movie)=>{
+    const tableItems = [];
     const tableRow = document.createElement('tr');
     tableRow.innerHTML=`
       <td id="movie-name">
       <div>${movie.name}</div> <br/>
-      <button class="edit-btn btn btn-outline-light mt-3" data-bs-toggle="modal" data-bs-target="#edit-movie-modal" data-id="${movie.id}">Editar Película</button>
-      <button class="highlight-btn btn btn-outline-warning mt-3" id="highlight-btn" data-id="${movie.id}">Destacar Película</button>
-      <button class="delete-btn btn btn-outline-danger mt-3" data-bs-toggle="modal" data-bs-target="#delete-movie-modal" data-id="${movie.id}">Eliminar Película</button>
+      <button class="edit-btn btn btn-outline-light mt-3 btn-sm" data-bs-toggle="modal" data-bs-target="#edit-movie-modal" data-id="${movie.id}">Editar Película</button>
+      <button class="highlight-btn btn btn-outline-warning mt-3 btn-sm" id="highlight-btn" data-id="${movie.id}">Destacar Película</button>
+      <button class="delete-btn btn btn-outline-danger mt-3 btn-sm" data-bs-toggle="modal" data-bs-target="#delete-movie-modal" data-id="${movie.id}">Eliminar Película</button>
       </td>
       <td id="movie-category">${movie.category}</td>
       <td id="featured-section">${movie.featured}</td>
       <td id="movie-description">${movie.description}</td>
       <td id="movie-image">
-        <img class="table-image" src=${movie.image}>
-      </td>
-      <td id="movie-trailer">
-        <iframe w-45 height="180" src=${movie.trailer} title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img class="table-image mx-auto d-block" src=${movie.image}>
       </td>
     `;
-    moviesTable.append(tableRow);
-    
+    tableItems.push(tableRow);
+    moviesTable.append(...tableItems);
   })
 }
 
@@ -74,9 +75,10 @@ async function createMoviesToAdd(){
         name: nameInput.value,
         description: descriptionInput.value,
         category: categoryInput.value,
-        featured: featuredInput.value,
+        featured: false,
         image: imageInput.value,
-        trailer: trailerInput.value
+        trailer: trailerInput.value,
+        coverPage: coverInput.value
       }
       )
     });
@@ -123,10 +125,10 @@ disableButton(imageInput);
 const fillEditInputs = (e) => {
   editNameInput.value = e.target.parentElement.parentElement.querySelector('#movie-name div').textContent.trim();
   editCategoryInput.value = e.target.parentElement.parentElement.querySelector('#movie-category').textContent.trim();
-  editFeaturedInput.value = e.target.parentElement.parentElement.querySelector('#featured-section').textContent.trim();
   editDescriptionInput.value = e.target.parentElement.parentElement.querySelector('#movie-description').textContent.trim();
   editImageInput.value = e.target.parentElement.parentElement.querySelector('#movie-image img').src;
   editTrailerInput.value = e.target.parentElement.parentElement.querySelector('#movie-trailer iframe').src;
+  editCoverInput.value = e.target.parentElement.parentElement.querySelector('#movie-cover img').src;
 };
 
 const udpateTable = async (id) => {
@@ -140,9 +142,10 @@ const udpateTable = async (id) => {
         name: editNameInput.value,
         description: editDescriptionInput.value,
         category: editCategoryInput.value,
-        featured: editFeaturedInput.value,
+        featured: false,
         image: editImageInput.value,
-        trailer: editTrailerInput.value
+        trailer: editTrailerInput.value,
+        coverPage: editCoverInput.value
       }
       )
     })
@@ -167,7 +170,7 @@ const highlightMovie = async (id, value) =>{
   } catch (error) {
     return error;
   }
-}
+};
 
 addListeners();
 function addListeners(){
@@ -177,9 +180,10 @@ function addListeners(){
   });
   nameInput.addEventListener('blur', validateInputs);
   categoryInput.addEventListener('blur', validateInputs);
-  featuredInput.addEventListener('blur', validateInputs);
   descriptionInput.addEventListener('blur', validateInputs);
   imageInput.addEventListener('blur', validateInputs);
+  trailerInput.addEventListener('blur', validateInputs);
+  coverInput.addEventListener('blur', validateInputs);
   deleteMovieModal.addEventListener('click', (e)=>{
     if(e.target.classList.contains('delete-movie-btn')){
       const id = e.target.parentElement.parentElement.parentElement.parentElement.getAttribute('data-id');
@@ -209,7 +213,20 @@ function addListeners(){
     });
     editNameInput.addEventListener('blur', validateInputs);
     editCategoryInput.addEventListener('blur', validateInputs);
-    editFeaturedInput.addEventListener('blur', validateInputs);
     editDescriptionInput.addEventListener('blur', validateInputs);
     editImageInput.addEventListener('blur', validateInputs);
-}
+    editTrailerInput.addEventListener('blur', validateInputs);
+    editCoverInput.addEventListener('blur', validateInputs);
+
+    //FILTRAR POR CATEGORIA:
+    tableHead.addEventListener('click', (e)=>{
+     if(e.target.classList.contains('action-category')){
+       const htmlCol = (e.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children);
+       const arr = [...htmlCol];
+       const filteredRow = arr.filter((rows)=>{
+          rows.firstElementChild.nextElementSibling.textContent === 'Accion';
+        })
+      console.log(filteredRow);
+     }
+    })
+};

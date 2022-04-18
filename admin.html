@@ -11,22 +11,13 @@
 </head>
 <body>
   <table class="table" id="table">
-    <thead class="table-dark">
+    <thead class="table-dark" id="table-head">
       <tr>
         <th scope="col">Nombre</th>
-      <div>
-        <th scope="col"> Categoria
-          <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Elegir una categoria</button>
-          <ul class="dropdown-menu">
-            <li class="dropdown-item">Acción</li>
-            <li class="dropdown-item">Animada</li>
-            <li class="dropdown-item">Comedia</li>
-        </th>
-      </div>
+        <th scope="col"> Categoria</th>
         <th scope="col">Destacada</th>
         <th scope="col">Descripción</th>
         <th scope="col">Foto</th>
-        <th scope="col">Trailer</th>
       </tr>
     </thead>
     <tbody id="table-body">
@@ -69,10 +60,6 @@
                 <input type="text" id="edit-category-input">
               </div>
               <div class="mb-4 d-flex flex-column align-items-center">  
-                <label>Destacada:</label>
-                  <input type="text" id="featured-edit-input" class="featured-input">
-              </div>
-              <div class="mb-4 d-flex flex-column align-items-center">  
                 <label>Descripción:</label>
                 <input type="text" id="edit-description-input">
               </div>
@@ -83,6 +70,10 @@
               <div class="mb-4 d-flex flex-column align-items-center">
                 <label>Trailer:</label>
                 <input type="text" id="edit-trailer-input" placeholder="URL del trailer">
+              </div>
+              <div class="mb-4 d-flex flex-column align-items-center">
+                <label>Cover Page:</label>
+                <input type="text" id="edit-cover-input" placeholder="URL para imágen de fondo">
               </div>
             </div>
             <div class="modal-footer">
@@ -112,10 +103,6 @@
             <input type="text" id="category-input">
           </div>
           <div class="mb-4 d-flex flex-column align-items-center">  
-            <label>Destacada:</label>
-            <input type="text" name="featured-input" id="featured-input" placeholder="true(si) o false(no)">
-          </div>
-          <div class="mb-4 d-flex flex-column align-items-center">  
             <label>Descripción:</label>
             <input type="text" id="description-input">
           </div>
@@ -126,6 +113,10 @@
           <div class="mb-4 d-flex flex-column align-items-center">
             <label for="trailer-input">Trailer:</label>
             <input type="text" id="trailer-input" placeholder="URL del trailer">
+          </div>
+          <div class="mb-4 d-flex flex-column align-items-center">
+            <label>Cover Page:</label>
+            <input type="text" id="cover-input" placeholder="URL para imágen de fondo">
           </div>
         </div>
         <div class="modal-footer">
