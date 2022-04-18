@@ -19,9 +19,11 @@ function getMovieArr(arr) {
   <img class=" w-100 hero-image" src="${coverPage}" alt="">
   <div class="text-center overlay p-5 text-white d-flex flex-column justify-content-end">
      <h2 class="display-2 fw-bold">${name}</h2>
-     <p class="fs-5 text-center">${description}</p>
+     <p class="fs-5 text-center">Dos días antes de su boda, cuatro amigos viajan a Las Vegas para una fiesta inolvidable y salvaje</p>
      <div class="text-center">
+     <a href=".././404.html">
      <button class="btn btn-outline-light button fs-1">Reproducir</button>
+     </a>
      </div
   </div>
   `;

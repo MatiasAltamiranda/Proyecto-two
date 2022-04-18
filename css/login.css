@@ -17,6 +17,7 @@
   padding: 1rem;
   box-shadow: 0px 8px 8px black;
   border-radius: 1rem;
+  box-shadow: 0px 0px 40px -9px #ff00e5;
 }
 
 figcaption img {
@@ -37,6 +38,10 @@ figcaption img {
   color: #9c568f;
   text-decoration: none;
   font-weight: bold;
+}
+
+::placeholder {
+  /* text-decoration: white; */
 }
 
 @media (min-width: 576px) {
