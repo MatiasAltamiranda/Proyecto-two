@@ -78,6 +78,7 @@ function buildComment(comment) {
     listComments.append(textComment);
     listComments.append(peopleComment);
     listComments.append(iconComment);
+    
   });
 }
 

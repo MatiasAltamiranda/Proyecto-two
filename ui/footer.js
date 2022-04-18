@@ -11,7 +11,7 @@ export function createFooter() {
                <h5>Todos los derechos reservados</h5>
           </div>
           <div class= 'd-flex flex-column col-12 col-md-3 align-items-center pt-3 justify-content-center'>
-               <a class="nav-link text-white btn" href=".././contacto.html">Contactenos</a>
+               <a class="nav-link text-white" href=".././contacto.html">Contactenos</a>
                <a class="nav-link text-white " href=".././about-us.html">Sobre Nosotros</a>
           </div>
           <div class='col-12 col-md-3 pt-3 d-flex flex-column justify-content-center align-items-center'>
