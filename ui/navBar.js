@@ -12,8 +12,8 @@ export function createNavBar() {
     <div class="collapse navbar-collapse justify-content-between fs-4" id="navbarNav">
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-4">
     <form class="d-flex">
-    <input id="inputBuscar" autocomplete="off" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-light" type="submit">Buscar</button>
+    <input id="inputBuscar" autocomplete="off" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+    <button class="btn btn-outline-light" type="button">Buscar</button>
     </form>
     </li>
     <li class="nav-item">
