@@ -79,7 +79,7 @@ export function createNavBar() {
 
   //BUSCAR PELICULA
 
-  const apiURL = 'http://localhost:4000/movies'
+  const apiURL = 'https://my-json-server.typicode.com/MatiasAltamiranda/RmaxServer/movies'
   const inputBuscar = document.querySelector('#inputBuscar')
   
   inputBuscar.addEventListener('blur',(e)=>{
@@ -103,7 +103,7 @@ export function createNavBar() {
     const mayusculaText = inputText.toUpperCase();
     data = data.filter(e=> e.name === mayusculaText)
     data.forEach((e) => {
-     window.location.href = `http://127.0.0.1:5500/profile.html#${e.id}`
+     window.location.href = `https://rolling-max.netlify.app/profile.html#${e.id}`
     });
   };
 
