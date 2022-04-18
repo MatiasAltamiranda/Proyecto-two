@@ -45,6 +45,10 @@ export function createNavBar() {
     <li class="nav-item">
     <a class="nav-link text-white" id="aCloseSession" href=/login.html>Logueate</a>
     <li class="nav-item">
+    <form class="d-flex">
+    <input id="inputBuscar" autocomplete="off" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-light" type="submit">Buscar</button>
+  </form>
     </ul>
     </div>
   </div>`;
@@ -75,6 +79,37 @@ export function createNavBar() {
     localStorage.removeItem("loggedUser");
     window.location.href = "/index.html";
   });
+
+  //BUSCAR PELICULA
+
+  const apiURL = 'http://localhost:4000/movies'
+  const inputBuscar = document.querySelector('#inputBuscar')
+  
+  inputBuscar.addEventListener('blur',(e)=>{
+    getMovie();
+}
+)
+
+ async function getMovie (){
+    try {
+      const response = await fetch(apiURL)
+      const data = await response.json();
+      linkMovie(data)
+    } catch (error) {
+      console.log(error)
+    }
+  } 
+  
+
+  function linkMovie(data){
+    const inputText =  inputBuscar.value
+    const mayusculaText = inputText.toUpperCase();
+    data = data.filter(e=> e.name === mayusculaText)
+    data.forEach((e) => {
+     window.location.href = `http://127.0.0.1:5500/profile.html#${e.id}`
+    });
+  };
+
 }
 
 export default createNavBar();
