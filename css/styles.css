@@ -1,5 +1,7 @@
 .body {
+  max-height: 100vh;
   background-color: #030328;
+  font-family: "Roboto", sans-serif;
 }
 
 /* SECTION CATEGORIAS */
@@ -43,6 +45,7 @@
     #1e1150,
     #18114e
   );
+  box-shadow: 20px 20px 100px -15px black;
 }
 
 /* xs: 0,

@@ -9,9 +9,6 @@ const imageInput = document.querySelector('#image-input');
 const coverInput = document.querySelector('#cover-input');
 const trailerInput = document.querySelector('#trailer-input');
 const modalForm = document.querySelector('#modal-form');
-const actionCategory = document.querySelector('#action-category');
-const cartoonCategory = document.querySelector('#cartoon-category');
-const comedyCategory = document.querySelector('#comedy-category');
 const tableHead = document.querySelector('#table-head');
 //ELIMINAR PELICULA:
 const deleteMovieModal = document.querySelector('#delete-movie-modal');
@@ -215,6 +212,15 @@ function addListeners(){
     editCategoryInput.addEventListener('blur', validateInputs);
     editDescriptionInput.addEventListener('blur', validateInputs);
     editImageInput.addEventListener('blur', validateInputs);
-    editTrailerInput.addEventListener('blur', validateInputs);
     editCoverInput.addEventListener('blur', validateInputs);
-};
+    editTrailerInput.addEventListener('blur', validateInputs);
+}
+
+
+// REDIRECCIONAR AL INDEX SI NO SOS ADMIN 
+
+const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+
+if(!loggedUser || loggedUser.role !== 'admin') {
+  window.location.href = '/index.html'
+}

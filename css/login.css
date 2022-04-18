@@ -1,48 +1,63 @@
- /* LOGIN */
-  .form{
-    background-color: #0e0e0e;
-    width: 95%;
-    margin: 0 auto;
-    padding: 1rem;
-    box-shadow: 0px 8px 8px black;
-    border-radius: 1rem;
+/* LOGIN */
+.body {
+  background-color: #030328;
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
 }
 
-figcaption img{
-    width: 20%;
-    margin: 0 auto;
+.formulario {
+  margin-top: 15rem;
 }
 
-.form input{
-    border: none;
-    border-bottom: 1px solid #63395b;
-    background-color: #0e0e0e;
-    width: 80%;
-    color: white;
-    outline:none;
+.form {
+  background-color: #0e0e0e;
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-shadow: 0px 8px 8px black;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 40px -9px #ff00e5;
 }
 
-
-.form a{
-    color:#9c568f;
-    text-decoration: none;
-    font-weight: bold;
+figcaption img {
+  width: 20%;
+  margin: 0 auto;
 }
 
-@media (min-width:576px){
-    .form{
-        width: 70%;
-    }
+.form input {
+  border: none;
+  border-bottom: 1px solid #63395b;
+  background-color: #0e0e0e;
+  width: 80%;
+  color: white;
+  outline: none;
 }
 
-@media (min-width:768px){
-    .form{
-        width: 50%;
-    }
+.form a {
+  color: #9c568f;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-@media (min-width:1200px){
-    .form{
-        width: 30%;
-    }
+::placeholder {
+  /* text-decoration: white; */
+}
+
+@media (min-width: 576px) {
+  .form {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .form {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form {
+    width: 30%;
+  }
 }
