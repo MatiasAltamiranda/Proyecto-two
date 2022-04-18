@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.body-about {
+  background-color: #030328;
+  margin-top: 15rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-us {
+  background-color: #030328;
+}
+
+.teamimg {
+  border-radius: 50%;
+  width: 60%;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
+  box-shadow: 0px 0px 80px -5px #ff00e5;
+}
+
+.logo-img {
+  box-shadow: 0px 0px 45px -11px #ff00e5;
+}
