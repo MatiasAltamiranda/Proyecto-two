@@ -217,16 +217,4 @@ function addListeners(){
     editImageInput.addEventListener('blur', validateInputs);
     editTrailerInput.addEventListener('blur', validateInputs);
     editCoverInput.addEventListener('blur', validateInputs);
-
-    //FILTRAR POR CATEGORIA:
-    tableHead.addEventListener('click', (e)=>{
-     if(e.target.classList.contains('action-category')){
-       const htmlCol = (e.target.parentElement.parentElement.parentElement.parentElement.nextElementSibling.children);
-       const arr = [...htmlCol];
-       const filteredRow = arr.filter((rows)=>{
-          rows.firstElementChild.nextElementSibling.textContent === 'Accion';
-        })
-      console.log(filteredRow);
-     }
-    })
 };
