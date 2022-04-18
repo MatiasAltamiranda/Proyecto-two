@@ -11,9 +11,10 @@ export function createNavBar() {
     </button>
     <div class="collapse navbar-collapse justify-content-between fs-4" id="navbarNav">
     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-4">
-    </li>
-    <li>
-      <img src="/team/stephen.jpg" alt="" width="35" height="auto" class="rounded-circle" id="imgAdmin"/>
+    <form class="d-flex">
+    <input id="inputBuscar" autocomplete="off" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-light" type="submit">Buscar</button>
+    </form>
     </li>
     <li class="nav-item">
     <div class="dropdown btn-lg">
@@ -45,10 +46,7 @@ export function createNavBar() {
     <li class="nav-item">
     <a class="nav-link text-white" id="aCloseSession" href=/login.html>Logueate</a>
     <li class="nav-item">
-    <form class="d-flex">
-    <input id="inputBuscar" autocomplete="off" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-light" type="submit">Buscar</button>
-  </form>
+    
     </ul>
     </div>
   </div>`;
