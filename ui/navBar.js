@@ -47,7 +47,7 @@ export function createNavBar() {
     <li class="nav-item">
     <form class="d-flex">
     <input id="inputBuscar" autocomplete="off" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-light" type="submit">Buscar</button>
+    <button class="btn btn-outline-light" type="button">Buscar</button>
   </form>
     </ul>
     </div>
