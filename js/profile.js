@@ -1,5 +1,3 @@
-
-
 const apiURL = "http://localhost:4000/movies";
 const commentURL = "https://jsonplaceholder.typicode.com/comments";
 const idURL = window.location.hash.slice(1);
@@ -55,10 +53,31 @@ function buildComment(comment) {
     emailComment.classList = "col-12";
     const textComment = document.createElement("div");
     textComment.classList = "col-12 mb-5";
+    const peopleComment = document.createElement("div");
+    emailComment.classList = "col-12";
+    const iconComment = document.createElement("div");
+    textComment.classList = "col-12 mb-5";
     emailComment.innerHTML = `<p class="text-light"><strong>${e.email}</strong> </p>`;
     textComment.innerHTML = `<p class="text-light">${e.body}</p>`;
+    peopleComment.innerHTML = `<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              fill="currentColor"
+              class="people bi bi-person-circle"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+              <path
+                fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+              />
+            </svg>`;
+    iconComment.innerHTML = `<i class="icon bi bi-star-fill"></i> <i class="icon bi bi-star-fill"> </i></i><i class="icon bi bi-star-fill"> </i></i><i class="icon bi bi-star-fill"> </i></i><i class="icon bi bi-star-fill"></i>`;
     listComments.append(emailComment);
     listComments.append(textComment);
+    listComments.append(peopleComment);
+    listComments.append(iconComment);
   });
 }
 

@@ -4,6 +4,7 @@ html {
 .footer-color {
   background-color: #030328;
   color: white;
+  box-shadow: 0px -3px 50px -10px black;
 }
 
 .button-color {
@@ -15,7 +16,7 @@ html {
 }
 
 .button-color:hover {
-  background: white;
+  /* background: white; */
   color: #030328;
 }
 .image-size {

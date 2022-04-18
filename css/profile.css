@@ -1,3 +1,19 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.body {
+  margin-top: 12rem;
+}
+
+.img-profile {
+  box-shadow: 10px 10px 100px -15px black;
+}
+
+.movie_trailer {
+  box-shadow: 10px 10px 100px -15px black;
+}
+
 .input_style {
   background-image: linear-gradient(
     to left bottom,
@@ -9,4 +25,16 @@
   );
   border: none;
   filter: brightness(60%);
+}
+
+.icon {
+  color: yellow;
+  margin-bottom: 3rem;
+}
+
+.people {
+  display: flex;
+  justify-content: baseline;
+  color: white;
+  margin-bottom: 1rem;
 }

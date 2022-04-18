@@ -18,6 +18,12 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <title>Peliculas</title>
   </head>
   <body class="body">
@@ -26,8 +32,11 @@
       <section class="info_Movie">
         <div class="container">
           <div class="row">
-            <div id="containerImg" class="col-12 col-sm-6 col-lg-3 p-3"></div>
-            <div class="text-center col-12 col-sm-6 col-lg-9 p-3">
+            <div
+              id="containerImg"
+              class="img-profile col-12 col-sm-6 col-lg-3 p-3"
+            ></div>
+            <div class="col-12 col-sm-6 col-lg-9 p-5">
               <h1 class="display-3 text-light fw-bold" id="titleMovie"></h1>
               <p class="fs-5 mt-4 text-light">
                 <strong class="text-warning">CATEGORIA :</strong
@@ -37,7 +46,7 @@
                 <strong class="text-warning">DESCRIPCION :</strong>
                 <span id="descriptionMovie"></span>
               </p>
-              <a href="#"
+              <a href="./404.html"
                 ><button
                   class="btn btn-outline-light fs-4 mt-4 mb-5 p-4 fw-bold"
                 >
@@ -65,7 +74,7 @@
         </div>
       </section>
 
-      <section class="comments">
+      <section class="comments mt-5">
         <div class="container mb-5">
           <h2 class="fs-3 mt-3 mb-3 text-light">Deja un comentario</h2>
           <form class="card_group">
@@ -101,7 +110,27 @@
 
         <section class="comments_list">
           <div class="container">
-            <div id="listComments" class="row"></div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              fill="currentColor"
+              class="people bi bi-person-circle"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+              <path
+                fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+              />
+            </svg>
+            <div id="listComments" class="col">
+              <i class="icon bi bi-star-fill"></i>
+              <i class="icon bi bi-star-fill"></i>
+              <i class="icon bi bi-star-fill"></i>
+              <i class="icon bi bi-star-fill"></i>
+              <i class="icon bi bi-star-fill"></i>
+            </div>
           </div>
         </section>
       </section>
