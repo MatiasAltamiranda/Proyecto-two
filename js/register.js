@@ -5,7 +5,7 @@ const passwordInput = document.querySelector('#password');
 const confirmPasswordInput = document.querySelector('#confirmPassword');
 const confirmPass = document.querySelector('#confirmPass');
 const buttonEnviar = document.querySelector('#btnEnviar');
-const API_URL = 'http://localhost:4000/users';
+const API_URL = 'https://my-json-server.typicode.com/MatiasAltamiranda/RmaxServer/users';
 
 const createRegister = async () => {
     try{

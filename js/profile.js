@@ -1,4 +1,4 @@
-const apiURL = "http://localhost:4000/movies";
+const apiURL = "https://my-json-server.typicode.com/MatiasAltamiranda/RmaxServer/movies";
 const commentURL = "https://jsonplaceholder.typicode.com/comments";
 const idURL = window.location.hash.slice(1);
 const containerImg = document.querySelector("#containerImg");

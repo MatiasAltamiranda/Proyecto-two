@@ -1,6 +1,6 @@
 const moviesTable = document.querySelector('#table-body');
 const addMovieBtn = document.getElementById('add-movie-btn');
-const API_URL = 'http://localhost:4000';
+const API_URL = 'https://my-json-server.typicode.com/MatiasAltamiranda/RmaxServer';
 const table = document.querySelector('#table');
 const nameInput = document.querySelector('#name-input');
 const categoryInput = document.querySelector('#category-input');

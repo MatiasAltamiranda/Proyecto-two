@@ -1,7 +1,7 @@
 function createCategories() {
   async function getCategorie() {
     try {
-      const apiURL = "http://localhost:4000/movies";
+      const apiURL = "https://my-json-server.typicode.com/MatiasAltamiranda/RmaxServer/movies";
       const response = await fetch(`${apiURL}`);
       const data = await response.json();
       createCards(data, categorieAnimated, "Animada");

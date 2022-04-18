@@ -4,7 +4,7 @@ const form = document.querySelector('#form');
 const emailInput = document.querySelector('#email');
 const passwordInput = document.querySelector('#password');
 // const btnLogin = document.querySelector('#btnLogin')
-const API_URL = 'http://localhost:4000/users';
+const API_URL = 'https://my-json-server.typicode.com/MatiasAltamiranda/RmaxServer/users';
 
 
 form.addEventListener('submit', async e => {
