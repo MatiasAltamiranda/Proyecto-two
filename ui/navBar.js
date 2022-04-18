@@ -46,7 +46,6 @@ export function createNavBar() {
     <li class="nav-item">
     <a class="nav-link text-white" id="aCloseSession" href=/login.html>Logueate</a>
     <li class="nav-item">
-    
     </ul>
     </div>
   </div>`;
