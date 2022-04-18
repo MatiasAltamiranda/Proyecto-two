@@ -1,4 +1,4 @@
-const API_URL = `http://localhost:4000`;
+const API_URL = `https://my-json-server.typicode.com/MatiasAltamiranda/RmaxServer`;
 
 async function getMovies() {
   try {
