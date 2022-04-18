@@ -74,10 +74,12 @@ function buildComment(comment) {
               />
             </svg>`;
     iconComment.innerHTML = `<i class="icon bi bi-star-fill"></i> <i class="icon bi bi-star-fill"> </i></i><i class="icon bi bi-star-fill"> </i></i><i class="icon bi bi-star-fill"> </i></i><i class="icon bi bi-star-fill"></i>`;
-    listComments.append(emailComment);
-    listComments.append(textComment);
     listComments.append(peopleComment);
     listComments.append(iconComment);
+    listComments.append(emailComment);
+    listComments.append(textComment);
+  
+   
     
   });
 }
